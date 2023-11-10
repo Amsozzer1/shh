@@ -13,7 +13,7 @@ const router = createBrowserRouter([
   {
     id: "root",
     
-    path: "/Shhh",
+    path: "/shhh",
     Component: StandardImageList,
   },
   {
