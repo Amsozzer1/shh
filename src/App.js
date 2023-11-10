@@ -1,23 +1,47 @@
 import logo from './logo.svg';
 import './App.css';
+import  DenseAppBar from './menu_bar';
+import  CuteApp from './Cute';
+import StandardImageList from './Gallery';
+import playlist from './ytPlayList.js';
+import Poem from './Poem.js';
+import LoveLetter  from './Letter.js';
+import Helmet from 'react-helmet';
+import {
+  Link,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 
+const router = createBrowserRouter([
+  {
+    id: "root",
+    
+    path: "/images",
+    Component: StandardImageList,
+  },
+  {
+    
+    path: "/playlist",
+    Component: playlist,
+  },
+  {
+      
+      path: "/poems",
+      Component: Poem,
+    },
+    {
+      path: "/letter",
+      Component: LoveLetter,
+    }
+  
+  
+]);
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Helmet bodyAttributes={{style: 'background-color : #FFF9C4'}}/>
+    <RouterProvider router={router} fallbackElement={<p>Initial Load...</p>} />
     </div>
   );
 }
