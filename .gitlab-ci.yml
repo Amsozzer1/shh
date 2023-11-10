@@ -1,7 +1,7 @@
 image: node:latest
 
 variables:
-  PUBLIC_URL: /images
+  PUBLIC_URL: /
 
 cache:
   paths:

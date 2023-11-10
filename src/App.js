@@ -1,14 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import  DenseAppBar from './menu_bar';
-import  CuteApp from './Cute';
 import StandardImageList from './Gallery';
 import playlist from './ytPlayList.js';
 import Poem from './Poem.js';
 import LoveLetter  from './Letter.js';
 import Helmet from 'react-helmet';
 import {
-  Link,
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
@@ -16,6 +12,11 @@ import {
 const router = createBrowserRouter([
   {
     id: "root",
+    
+    path: "/",
+    Component: StandardImageList,
+  },
+  {
     
     path: "/images",
     Component: StandardImageList,
